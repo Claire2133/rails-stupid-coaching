@@ -1,0 +1,20 @@
+<% input = @input %>
+
+<h1>Questions</h1>
+
+<h3> Your question:
+  <%= @input %>
+
+</h3>
+
+<h3>Coach answer
+  <% if input == "I am going to work" %>
+  <%= "Great!" %>
+  <% elsif input[-1] == "?" %>
+  <%= "Silly question, get dressed and go to work!" %>
+  <% else %>
+  <%= "I don't care, get dressed and go to work!" %>
+  <%end %>
+</h3>
+
+<%= link_to 'Try again', '/ask' %>
